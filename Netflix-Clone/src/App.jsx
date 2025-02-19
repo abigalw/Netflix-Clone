@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Home from './pages/home/Home'
 import './App.css'
 
 function App() {
@@ -6,9 +7,9 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>hii </h1>
-      </div>
+      <div className="app">
+      <Home />
+    </div>
       
     </>
   )
