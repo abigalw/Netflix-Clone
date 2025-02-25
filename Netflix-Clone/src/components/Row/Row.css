@@ -1,0 +1,83 @@
+.row {
+    color: white;
+    margin-left: 20px;
+    margin-top: -20px; 
+    margin-bottom: 20px; /* Space between each row */
+    padding: 10px 0; /* Padding for spacing *
+}
+
+.row h2 {
+
+    margin-bottom: 10px; /* Adds space between title and row */
+    font-size: 22px; /* Adjust the text size if needed */
+    font-weight: bold;
+    display: block; /* Ensures it takes full width */
+    margin-left: 20px; /* Left padding */
+    margin-bottom: 10px; /* Space between title and row */
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.row__posters {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px 0 10px;
+    scroll-behavior: smooth;
+}
+
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row__poster,
+.row__posterLarge {
+    width: 100px; 
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.row__poster {
+    .row__posters {
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        padding: 10px 0;
+        scroll-behavior: smooth;
+        margin-top: 10px; /* Push images down so they don't touch the title */
+    }
+    
+    height: 130px;
+}
+
+.row__posterLarge {
+    height: 330px;
+}
+
+.row__poster:hover,
+.row__posterLarge:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.row__poster {
+    width: 250px; /* Landscape size */
+    height: 140px; 
+    object-fit: cover; 
+    transition: transform 0.3s;
+    border-radius: 4px; 
+}
+
+/* Special case for larger posters (Netflix Originals) */
+.row__posterLarge {
+    width: 200px; /* Smaller than before */
+    height: 300px; /* Taller */
+}
+
+.row__posterLarge:hover,
+.row__poster:hover {
+    transform: scale(1.1); /* Ensure smooth scaling */
+}
